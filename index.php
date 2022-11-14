@@ -10,16 +10,20 @@
 </head>
 
 <body class="flex justify-center flex-col h-screen items-center">
-    <header>
-        <h3>Pendaftaran Siswa Baru</h3>
-    </header>
-    <h4>Menu</h4>
+
     <nav>
-        <div class="btn-group">
-            <button class="btn btn-active">
-                <a href="form-daftar.php">Daftar Baru</a></button>
-            <button class="btn"><a href="list-siswa.php">Pendaftar</a></button>
+        <div class="card w-96 bg-neutral text-neutral-content">
+            <div class="card-body items-center text-center">
+                <h3>Pendaftaran Siswa Baru</h3>
+                <h4>Menu</h4>
+                <div class="btn-group">
+                    <button class="btn btn-active">
+                        <a href="form-daftar.php">Daftar Baru</a></button>
+                    <button class="btn"><a href="list-siswa.php">Pendaftar</a></button>
+                </div>
+            </div>
         </div>
+
     </nav>
 
     <?php if (isset($_GET['status'])) : ?>
@@ -29,7 +33,7 @@
             </svg>
             <span class="sr-only">Info</span>
             <div class="ml-3 text-sm font-medium text-blue-700 dark:text-blue-800">
-            <?= $_GET["status"] == "sukses" ? "Sukses!" : "Gagal!" ?> <a href="#" class="font-semibold underline hover:text-blue-800 dark:hover:text-blue-900">example link</a>. Give it a click if you like.
+                <?= $_GET["status"] == "sukses" ? "Sukses!" : "Gagal!" ?> <a href="#" class="font-semibold underline hover:text-blue-800 dark:hover:text-blue-900">example link</a>. Give it a click if you like.
             </div>
             <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-blue-100 text-blue-500 rounded-lg focus:ring-2 focus:ring-blue-400 p-1.5 hover:bg-blue-200 inline-flex h-8 w-8 dark:bg-blue-200 dark:text-blue-600 dark:hover:bg-blue-300" data-dismiss-target="#alert-1" aria-label="Close">
                 <span class="sr-only">Close</span>
